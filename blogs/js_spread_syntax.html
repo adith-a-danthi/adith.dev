@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../styles/main.css" />
+		<link rel="stylesheet" href="../styles/blog.css" />
+		<title>Design Resources</title>
+	</head>
+	<body>
+		<div class="blog">
+			<a class="link" href="../blogs.html"> &leftarrow; Back </a>
+			<div class="spread heading2">{ ••• }</div>
+			<h1 class="heading2">JavaScript Spread Syntax...</h1>
+			<p class="subheading">
+				The spread operator is a useful and quick syntax for adding items to
+				arrays, combining arrays or objects.
+			</p>
+			<hr />
+			<section>
+				<h1 class="category">What is the spread operator?</h1>
+				<p class="normal">
+					In JavaScript, the spread syntax referes to the use of ellipsis or 3
+					dots (<code class="code">...</code>) to expand an iterable array or
+					object.
+				</p>
+				<p class="normal">
+					Syntax of spread operator is same as Rest parameter but it works in
+					the exact opposite of it. Just one of JavaScript's quirks!
+				</p>
+				<h1 class="subheading">Syntax</h1>
+				<pre class="code-block"><code>
+        var arr = [...iterable];</code>
+                </pre>
+				<p class="normal">
+					In the aboves syntax, the <code class="code">...</code> is the spread
+					operator.
+				</p>
+			</section>
+			<section>
+				<h1 class="category">What can the three dots do?</h1>
+				<p class="normal">
+					The spread operatoris useful for many comman tasks in JavaScript. Here
+					are some of them:
+				</p>
+				<ul class="list">
+					<li>Copying Arrays / Objects</li>
+					<li>Combining Arrays / Objects</li>
+					<li>Adding items to Arrays / Objects</li>
+					<li>Destructuring Fun</li>
+					<li>As an argument</li>
+					<li>Rest parameter (...)</li>
+				</ul>
+			</section>
+			<section>
+				<h1 class="category">Copying Arrays / Objects</h1>
+				<p class="normal">
+					Using the ... spread operator you can conveniently copy an object /
+					array.
+				</p>
+				<p class="normal"><strong>Array</strong></p>
+				<pre class="code-block"><code>
+        var arr = [1, 2, 3];
+        var arr2 = [...arr];
+        console.log(arr2); // [1, 2, 3]</code>
+                </pre>
+				<p class="normal"><strong>Object</strong></p>
+				<pre class="code-block"><code>
+        var obj = {
+            name: 'John',
+            age: 30
+        };
+        var obj2 = {...obj};
+        console.log(obj2); 
+        // {name: 'John', age: 30}</code>
+                </pre>
+			</section>
+			<section>
+				<h1 class="category">Combining Arrays / Objects</h1>
+				<p class="normal">
+					Using the ... spread operator you merge or concatenate objects /
+					arrays.
+				</p>
+				<p class="normal"><strong>Arrays</strong></p>
+				<pre class="code-block"><code>
+        var arr1 = [1, 2, 3];
+        var arr2 = [4, 5, 6];
+        var arr3 = [...arr1, ...arr2];
+        console.log(arr3); // [1, 2, 3, 4, 5, 6]</code>
+                </pre>
+				<p class="normal"><strong>Objects</strong></p>
+				<pre class="code-block"><code>
+        var obj1 = {
+            name: 'John',
+            age: 30
+        };
+        var obj2 = {
+            age: 40,
+            job: 'developer',
+        };
+        var obj3 = {...obj1, ...obj2};
+        console.log(obj3); 
+        // {
+                name: 'John', 
+                age: 40, 
+                job: 'developer'
+            }</code>
+                </pre>
+			</section>
+			<section>
+				<h1 class="category">Adding items to Arrays / Objects</h1>
+				<p class="normal">
+					Using the ... spread operator you can add items to arrays or objects.
+				</p>
+				<p class="normal"><strong>Arrays</strong></p>
+				<pre class="code-block"><code>
+        var arr1 = [1, 2, 3];
+        var arr2 = [4, 5, 6];
+        var arr3 = [...arr1, 7, ...arr2];
+        console.log(arr3); // [1, 2, 3, 7, 4, 5, 6]</code>
+				</pre>
+
+				<p class="normal">It can even be used with push and unshift methods</p>
+				<pre class="code-block"><code>
+        // Adds arr2 items to end of array
+        arr1.push(...arr2) 
+        //Adds arr2 items to start of array
+        arr1.unshift(...arr2)</code>
+                </pre>
+				<p class="normal"><strong>Object</strong></p>
+				<pre class="code-block"><code>
+        var obj1 = { hello: `👋🏻`};
+        var obj2 = { world: `🌎`};
+        var obj3 = {...obj1, ...obj2, love: '💙'};
+        console.log(obj3);
+        // {hello: '👋🏻', world: '🌎', love: '💙'}</code>
+                </pre>
+			</section>
+			<section>
+				<h1 class="category">Destructuring</h1>
+				<p class="normal">
+					Destructuring is a JavaScript feature that allows you to extract
+					values from arrays and objects.
+				</p>
+				<p class="normal"><strong>Array</strong></p>
+				<pre class="code-block"><code>
+	var arr = [1, 2, 3];
+	var [a, b, c, d, e] = [...arr, 4, 5];
+	console.log(a, b, c, d, e); // 1 2 3 4 5</code>
+				</pre>
+				<p class="normal"><strong>Object</strong></p>
+				<pre class="code-block"><code>
+        let obj1 = {a: 1, b: 2};
+        let {a, b, c} = {...obj1, c: 3};
+        console.log(a, b, c); // 1 2 3</code>
+                </pre>
+			</section>
+			<section>
+				<h1 class="category">As an argument</h1>
+				<p class="normal">
+					You can use the spread operator to pass an array or object as an
+					argument to a function.
+				</p>
+				<pre class="code-block"><code>
+        function sum(a, b, c) {
+            return a + b + c;
+        }
+        let arr = [1, 2, 3];
+        console.log(sum(...arr)); // 6</code>
+                </pre>
+			</section>
+			<section>
+				<h1 class="category">Rest parameter (...)</h1>
+				<p class="normal">
+					The rest parameter is a JavaScript feature that allows you to pass an
+					arbitrary number of arguments to a function. But but but... how is it
+					different from the previous examples?
+				</p>
+				<p class="normal">
+					The rest parameter is on the recieving side of the where as the spread
+					operator is on the sending side.
+				</p>
+				<p class="normal">
+					Simply put, the rest operator takes all remaining elements (this is
+					the reason it's named rest, as in the rest of the elements :P ) and
+					puts them into an array.
+				</p>
+				<pre class="code-block"><code>
+        function sum(...args) {
+            return args.reduce(
+                (a, b) => a + b
+            );
+        }
+        console.log(sum(1, 2, 3, 4, 5)); // 15</code>
+                </pre>
+				<p class="normal">
+					The rest parameter can be used while destructuring as well.
+				</p>
+				<pre class="code-block"><code>
+        let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+        console.log(x); // 1
+        console.log(y); // 2
+        console.log(z); // { a: 3, b: 4 }</code>
+                </pre>
+			</section>
+			<section id="conclusion">
+				<h1 class="category">Conclusion</h1>
+				<p class="normal">
+					The spread operator is a very powerful feature in JavaScript added in
+					ES6.
+				</p>
+				<p class="normal">
+					I like the fact that it's so easy to use yet very powerful, makes
+					working with arrays and objects much easier.
+				</p>
+				<p class="normal">
+					Knowing spread operators definitely saves you a lot of time when
+					coding. It also makes your code more readable and maintainable.
+				</p>
+				<p class="normal">
+					I hope this article helped you learn a little bit about the spread
+					operator.
+				</p>
+			</section>
+		</div>
+	</body>
+</html>

@@ -1,3 +1,7 @@
+:root {
+    --code: #f0f0f0;
+}
+
 .card-long {
 	width: 50vw;
 	margin: 1em;
@@ -43,8 +47,12 @@
 	text-align: justify;
 }
 
-.blog ul li {
+.detailed-list li {
 	margin: 1em;
+}
+
+.list li {
+    margin: 0.25em 1em;
 }
 
 .link {
@@ -57,6 +65,25 @@
 
 .list-item-title {
 	font-size: 1.5em;
+}
+
+.code-block,
+.code-block * {
+    background-color: var(--faded-color);
+    color: var(--light-color);
+}
+
+.code {
+    background-color: var(--code);
+}
+
+.spread {
+    display: block;
+    margin: 0.1em auto;
+    padding: 0.1em;
+    text-align: center;
+    background-color: yellow;
+    font-weight: 900;
 }
 
 @media screen and (max-width: 1200px) {
@@ -90,6 +117,7 @@
 	.list-item-title {
 		font-size: 1.2rem;
 	}
+    code,
 	.blog .normal {
 		font-size: 1em;
 	}
@@ -103,6 +131,7 @@
 	.list-item-title {
 		font-size: 1em;
 	}
+    code,
 	.blog .normal {
 		font-size: 0.75em;
 	}
