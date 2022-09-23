@@ -28,6 +28,10 @@ html {
   color: var(--light-color);
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
 .nav {
   position: fixed;
   display: flex;
@@ -62,7 +66,7 @@ html {
   align-items: center;
   justify-content: center;
   margin: auto;
-  padding: 5em 1em;
+  padding: 2rem 1rem;
 }
 
 .light,
@@ -125,6 +129,13 @@ html {
   height: 2rem;
   width: 2rem;
   margin: auto 0.5em;
+  fill: var(--light-fade-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  fill: var(--light-color);
 }
 
 .about-text {
@@ -152,7 +163,8 @@ html {
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-content: flex-start;
   margin: 1em;
 }
 
@@ -204,6 +216,15 @@ html {
 .btn-link:hover {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
+}
+
+.footer {
+  width: 65%;
+}
+
+.footer .social-icon {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 @media screen and (max-width: 1200px) {
