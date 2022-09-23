@@ -10,8 +10,10 @@
 		<title>JavaScript Spread Syntax ... | Adith A Danthi</title>
 	</head>
 	<body>
-		<div class="blog">
+		<main class="blog">
 			<a class="link" href="../blogs.html"> &leftarrow; Back </a>
+
+      <!-- Intro -->
 			<div class="spread heading2">{ ••• }</div>
 			<h1 class="heading2">JavaScript Spread Syntax...</h1>
 			<p class="subheading">
@@ -19,6 +21,8 @@
 				arrays, combining arrays or objects.
 			</p>
 			<hr />
+
+      <!-- The What -->
 			<section>
 				<h1 class="category">What is the spread operator?</h1>
 				<p class="normal">
@@ -39,6 +43,8 @@
 					operator.
 				</p>
 			</section>
+
+      <!-- Uses -->
 			<section>
 				<h1 class="category">What can the three dots do?</h1>
 				<p class="normal">
@@ -54,6 +60,8 @@
 					<li>Rest parameter (...)</li>
 				</ul>
 			</section>
+
+      <!-- Copying -->
 			<section>
 				<h1 class="category">Copying Arrays / Objects</h1>
 				<p class="normal">
@@ -73,10 +81,12 @@
             age: 30
         };
         var obj2 = {...obj};
-        console.log(obj2); 
+        console.log(obj2);
         // {name: 'John', age: 30}</code>
                 </pre>
 			</section>
+
+      <!-- Combining -->
 			<section>
 				<h1 class="category">Combining Arrays / Objects</h1>
 				<p class="normal">
@@ -101,14 +111,16 @@
             job: 'developer',
         };
         var obj3 = {...obj1, ...obj2};
-        console.log(obj3); 
+        console.log(obj3);
         // {
-                name: 'John', 
-                age: 40, 
+                name: 'John',
+                age: 40,
                 job: 'developer'
             }</code>
                 </pre>
 			</section>
+
+      <!-- Adding -->
 			<section>
 				<h1 class="category">Adding items to Arrays / Objects</h1>
 				<p class="normal">
@@ -125,7 +137,7 @@
 				<p class="normal">It can even be used with push and unshift methods</p>
 				<pre class="code-block"><code>
         // Adds arr2 items to end of array
-        arr1.push(...arr2) 
+        arr1.push(...arr2)
         //Adds arr2 items to start of array
         arr1.unshift(...arr2)</code>
                 </pre>
@@ -138,6 +150,8 @@
         // {hello: '👋🏻', world: '🌎', love: '💙'}</code>
                 </pre>
 			</section>
+
+      <!-- Destructuring -->
 			<section>
 				<h1 class="category">Destructuring</h1>
 				<p class="normal">
@@ -157,6 +171,8 @@
         console.log(a, b, c); // 1 2 3</code>
                 </pre>
 			</section>
+
+      <!-- Arguments -->
 			<section>
 				<h1 class="category">As an argument</h1>
 				<p class="normal">
@@ -171,6 +187,8 @@
         console.log(sum(...arr)); // 6</code>
                 </pre>
 			</section>
+
+      <!-- Rest Parameter -->
 			<section>
 				<h1 class="category">Rest parameter (...)</h1>
 				<p class="normal">
@@ -205,6 +223,8 @@
         console.log(z); // { a: 3, b: 4 }</code>
                 </pre>
 			</section>
+
+      <!-- Conclusion -->
 			<section id="conclusion">
 				<h1 class="category">Conclusion</h1>
 				<p class="normal">
@@ -224,6 +244,6 @@
 					operator.
 				</p>
 			</section>
-		</div>
+		</main>
 	</body>
 </html>
