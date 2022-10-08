@@ -292,7 +292,7 @@ html {
   }
   .intro h1,
   .heading2 {
-    font-size: 1.75em;
+    font-size: 2rem;
   }
   .skill,
   .intro h2,
@@ -309,5 +309,12 @@ html {
   }
   .project-list h2 {
     font-size: 1.25rem;
+  }
+  .footer {
+    width: 100%;
+  }
+  .footer .social-icon {
+    height: 1.2rem;
+    width: 1.2rem;
   }
 }
