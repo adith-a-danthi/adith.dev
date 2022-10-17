@@ -200,6 +200,12 @@ html {
   color: var(--dark-color);
 }
 
+.light .btn-link-solid {
+  border: 1px solid var(--faded-color);
+  background-color: var(--faded-color);
+  color: var(--light-color);
+}
+
 .btn-link-solid:hover {
   border: 1px solid var(--accent-color);
   background-color: var(--accent-color);
